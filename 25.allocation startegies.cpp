@@ -1,17 +1,11 @@
-.#include <stdio.h>
-
+#include <stdio.h>
 #define FILE_BLOCKS 100
-
-// Contiguous Allocation
 int contiguousAllocation(int blockPosition) {
     return 1; // Only one disk I/O operation is required for contiguous allocation
 }
-
-// Linked Allocation
 int linkedAllocation(int blockPosition) {
     return 1; // Only one disk I/O operation is required for linked allocation
 }
-// Indexed Allocation
 int indexedAllocation(int blockPosition) {
     if (blockPosition == 0 || blockPosition == FILE_BLOCKS - 1)
         return 2; // Two disk I/O operations are required for indexed allocation at the beginning or end
